@@ -9,9 +9,11 @@ jobs:
          with: 
             node-version: '14'
        - run: yarn install
-       - run: yarn docs:build
-       - uses: easingthemes/ssh-deploy@main
-       - env:
+       - name: Run build task
+         run: yarn docs:build
+       - name: Deploy to Server
+         uses: easingthemes/ssh-deploy@main
+         env:
               SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
               ARGS: "-rltgoDzvO --delete"
               SOURCE: "dist/"
