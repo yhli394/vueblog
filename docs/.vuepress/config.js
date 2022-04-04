@@ -11,6 +11,13 @@ module.exports = {
       ],
     theme: 'reco',
     themeConfig: {
+      // 备案
+      record: '蜀ICP备2022007878号',
+      recordLink: 'https://beian.miit.gov.cn/#/Integrated/index',
+      cyberSecurityRecord: '公安部备案文案',
+      cyberSecurityLink: 'http://www.beian.gov.cn/portal/index.do',
+      // 项目开始时间，只填写年份
+      startYear: '2022',
       valineConfig: {
         appId: 'fBnitjGHwpVBILFhDYEwOcky-gzGzoHsz',// your appId
         appKey: '9WusNbFFnF5rKk5SfYuizKAP', // your appKey
