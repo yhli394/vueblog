@@ -11,10 +11,15 @@ sticky: 1
 
 ## SpringCache简介
 
-> Since version 3.1, the Spring Framework provides support for transparently adding caching to an existing Spring application. Similar to the transaction support, the caching abstraction allows consistent use of various caching solutions with minimal impact on the code.In Spring Framework 4.1, the cache abstraction was significantly extended with support for JSR-107 annotations and more customization options.--https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache
+::: tip
+> Since version 3.1, the Spring Framework provides support for transparently adding caching to an existing Spring application. Similar to the transaction support, the caching abstraction allows consistent use of various caching solutions with minimal impact on the code.In Spring Framework 4.1, the cache abstraction was significantly extended with support for JSR-107 annotations and more customization options.
+
+:::right
+来自 [Spring官网](https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache)
+:::
 
 上面摘自官网对Cache的介绍，文章中提到Cache Abstraction，中文译为缓存抽象，是一种门面（可以联想日志门面的作用）
-<!--more-->
+
 ## SpringCache常用注解
 
 ### @CacheConfig
@@ -60,7 +65,7 @@ public List<Article> selectAllArticle(){
 ```
 
 SpEL语法官网链接：
-> https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/expressions.html
+> [Spring官网](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/expressions.html)
 
 ### @CachePut
 
@@ -68,11 +73,17 @@ SpEL语法官网链接：
 
 @CachePut注解常用属性有key和cacheNames，**一般用在更新方法上**，用于更新缓存，**和@Cacheable的区别**在于被@CachePut标记的方法每当被调用的时候都会执行方法体中的内容，并且将返回值进行缓存
 
-> Using @CachePut and @Cacheable annotations on the same method is generally strongly discouraged because they have different behaviors. While the latter causes the method invocation to be skipped by using the cache, the former forces the invocation in order to run a cache update. This leads to unexpected behavior and, with the exception of specific corner-cases (such as annotations having conditions that exclude them from each other), such declarations should be avoided. Note also that such conditions should not rely on the result object (that is, the #result variable), as these are validated up-front to confirm the exclusion.
+::: theorem
+Using @CachePut and @Cacheable annotations on the same method is generally strongly discouraged because they have different behaviors. While the latter causes the method invocation to be skipped by using the cache, the former forces the invocation in order to run a cache update. This leads to unexpected behavior and, with the exception of specific corner-cases (such as annotations having conditions that exclude them from each other), such declarations should be avoided. Note also that such conditions should not rely on the result object (that is, the #result variable), as these are validated up-front to confirm the exclusion.
+
+:::right
+来自 [Spring官网](https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache)
+:::
 
 官方不建议将@CachePut和@Cacheable注解用于同一个方法上
 
 示例如下：
+
 ```java
 @CachePut(key = "#uid")
 public int updateUserRolesById(int uid,int[] rids) {
@@ -81,6 +92,7 @@ public int updateUserRolesById(int uid,int[] rids) {
     return i;
 }
 ```
+
 ### @CacheEvict
 
 > @CacheEvict: Triggers cache eviction-摘自官网
@@ -88,6 +100,7 @@ public int updateUserRolesById(int uid,int[] rids) {
 @CacheEvict注解主要用于删除缓存，常用属性有key,cacheNames,beforeInvocation，其中，beforeInvocation属性默认为false，即在方法调用之后在删除缓存
 
 示例如下：
+
 ```java
 @CacheEvict(key = "#uid")
 public List<Article> selectByUserId(Integer uid){
