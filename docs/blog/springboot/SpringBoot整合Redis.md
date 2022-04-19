@@ -11,8 +11,8 @@ sticky: 1
 
 ## SpringCache简介
 
-::: tip
-> Since version 3.1, the Spring Framework provides support for transparently adding caching to an existing Spring application. Similar to the transaction support, the caching abstraction allows consistent use of various caching solutions with minimal impact on the code.In Spring Framework 4.1, the cache abstraction was significantly extended with support for JSR-107 annotations and more customization options.
+::: theorem
+Since version 3.1, the Spring Framework provides support for transparently adding caching to an existing Spring application. Similar to the transaction support, the caching abstraction allows consistent use of various caching solutions with minimal impact on the code.In Spring Framework 4.1, the cache abstraction was significantly extended with support for JSR-107 annotations and more customization options.
 
 :::right
 来自 [Spring官网](https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache)
@@ -24,9 +24,15 @@ sticky: 1
 
 ### @CacheConfig
 
-> @CacheConfig:Shares some common cache-related settings at class-level-摘自官网
+::: theorem
+@CacheConfig:Shares some common cache-related settings at class-level
+
+::: right
+来自 [Spring官网](https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache)
+:::
 
 @CacheConfig注解**只能作用于类或接口上**，源码中的cacheNames属性常用，cacheNames用于指定缓存的名称，示例如下，此配置表明ArticleService类中的所有方法的cacheNames为article，在方法上面也可以单独指定cacheName，此时会隐藏掉@CacheConfig中全局配置的cacheName
+
 ```java
 @Service
 @CacheConfig(cacheNames = "article")
@@ -37,7 +43,7 @@ public class ArticleService {
 
 ### @Cacheable
 
-> @Cacheable: Triggers cache population-摘自官网
+> @Cacheable: Triggers cache population
 
 @Cacheable注解一般**用在查询方法上面**，常用属性key和cacheNames，Cache Abstraction提供以下的算法来生成key:
 
@@ -64,8 +70,7 @@ public List<Article> selectAllArticle(){
 
 ```
 
-SpEL语法官网链接：
-> [Spring官网](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/expressions.html)
+SpEL语法官网链接：[Spring官网](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/expressions.html)
 
 ### @CachePut
 
@@ -95,7 +100,7 @@ public int updateUserRolesById(int uid,int[] rids) {
 
 ### @CacheEvict
 
-> @CacheEvict: Triggers cache eviction-摘自官网
+> @CacheEvict: Triggers cache eviction
 
 @CacheEvict注解主要用于删除缓存，常用属性有key,cacheNames,beforeInvocation，其中，beforeInvocation属性默认为false，即在方法调用之后在删除缓存
 
