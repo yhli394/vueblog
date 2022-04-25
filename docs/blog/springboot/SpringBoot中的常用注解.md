@@ -6,7 +6,7 @@ tags:
   - SpringBoot
 categories:  
 - Spring
-sticky: 2
+sticky: 3
 ---
 
 ​SpringBoot接触了有几个月了，目前基本会用这个框架，但是底层的原理了解甚少。结合目前做过的一些项目，今天先来总结一下SpringBoot中的常用注解。
