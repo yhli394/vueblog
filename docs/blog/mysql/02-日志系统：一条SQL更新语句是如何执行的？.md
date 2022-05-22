@@ -16,11 +16,11 @@ WAL技术（Write-Ahead Logging）：先写日志，再写磁盘。
 1. 当某一条SQL语句需要更新的时候，InnoDB引擎会先将更新的记录存储到redo log里面，并更新内存。另外，InnoDB存储引擎往往会在系统空闲的时候才将更新的记录写到磁盘中去。
 2. InnoDB的redo log存储空间有限，下图显示了一个能够存储4GB空间的redo log，如果日志满了会删除以前的日志。
 
-![一条SQL更新语句是如何执行的？-2022-03-13-16-07-58](https://imagecontainter-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/一条SQL更新语句是如何执行的？-2022-03-13-16-07-58.png)
+![一条SQL更新语句是如何执行的？-2022-05-08-20-44-47](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/一条SQL更新语句是如何执行的？-2022-05-08-20-44-47.png)
 
-3. 上图，write pos(当前redo log日志写的位置)和checkpoint（需要删除日志的位置）之间表示的是日志的剩余空间，如果write pos追上check point，此时需要释放掉以前日志的部分空间，才能继续记录日志。
+1. 上图，write pos(当前redo log日志写的位置)和checkpoint（需要删除日志的位置）之间表示的是日志的剩余空间，如果write pos追上check point，此时需要释放掉以前日志的部分空间，才能继续记录日志。
    
-4. InnoDB因为有redo log，所以可以保证数据库发生异常重启后，之前的提交记录不会丢失，这个能力称之为**crash-safe**。
+2. InnoDB因为有redo log，所以可以保证数据库发生异常重启后，之前的提交记录不会丢失，这个能力称之为**crash-safe**。
 
 ## binlog
 

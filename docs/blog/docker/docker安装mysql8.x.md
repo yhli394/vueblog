@@ -16,7 +16,7 @@ docker pull mysql:latest
 
 通过docker images，查看镜像是否拉下来了。
 
-![docker安装mysql8.x-2022-03-13-15-52-53](https://imagecontainter-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-03-13-15-52-53.png)
+![docker安装mysql8.x-2022-05-08-20-46-06](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-05-08-20-46-06.png)
 
 接着，我们准备一个docker-compose.yml文件和一个my.cnf文件
 
@@ -85,7 +85,7 @@ default-character-set=UTF8MB4
 
 ​​在docker-compose.yml文件所在的目录，执行docker-compose up -d来实例化一个容器。
 
-![docker安装mysql8.x-2022-03-13-16-04-07](https://imagecontainter-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-03-13-16-04-07.png)
+![docker安装mysql8.x-2022-05-08-20-47-27](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-05-08-20-47-27.png)
 
 通过View Logs查看容器日志，可以看到有报错，如上图所示，看到网上一片博客[1]说的是由于“MYSQL新特性secure_file_priv对读写文件的影响”，解决办法是在my.cnf中的[mysqld]下添加一句如下的话：
 
@@ -99,13 +99,13 @@ default-character-set=UTF8MB4
 
 （3）输入show databases，显示数据库
 
-![docker安装mysql8.x-2022-03-13](https://imagecontainter-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-03-13.png)
+![docker安装mysql8.x-2022-05-08-20-48-09](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-05-08-20-48-09.png)
 
 （4）输入use mysql切换数据库
 
 （5）输入select user,host,authentication_string from user;
 
-![docker安装mysql8.x-2022-03-13-15-56-04](https://imagecontainter-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-03-13-15-56-04.png)
+![docker安装mysql8.x-2022-05-08-20-48-47](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-05-08-20-48-47.png)
 
 （6）如果user=root所在的行的host值为localhost，说明mysql中的root用户只能通过本机连接，在windows电脑上通过sqlyog,navicat,idea等工具是不能连接的，需要修改host值为%，让非本机也可以连接。
 
@@ -127,7 +127,7 @@ flush privileges;
 
 现在通过idea就可以连接上mysql8.x版本了，如果连接不上，可以切换一下驱动。如果用sqlyog连接报以下的错误：
 
-![docker安装mysql8.x-2022-03-13-15-59-39](https://imagecontainter-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-03-13-15-59-39.png)
+![docker安装mysql8.x-2022-05-08-20-49-58](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-05-08-20-49-58.png)
 
 由于mysql8.x默认采用caching_sha2_password的方法认证用户，而mysql5.x默认采用mysql_native_password方法来认证用户。而sqlyog等可视化工具如果版本较老的话是不支持mysql8.x的认证方式。解决办法如下；
 
@@ -155,7 +155,7 @@ flush privileges;
 
   （4）重新用sqlyog可视化工具连接，如下：
 
-![docker安装mysql8.x-2022-03-13-15-56-54](https://imagecontainter-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-03-13-15-56-54.png)
+![docker安装mysql8.x-2022-05-08-20-50-40](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/docker安装mysql8.x-2022-05-08-20-50-40.png)
 
 Notes：
 

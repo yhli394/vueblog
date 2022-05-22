@@ -11,7 +11,7 @@ Redis读写数据快的原因主要有两方面：其一：Redis是内存数据�
 
 Redis数据类型和底层数据结构的关系：其中String数据类型的底层是简单动态字符串，而其它四种数据类型的底层均有两种数据结构组成。
 
-![快速的Redis有哪些慢操作-2022-03-14-19-55-14](https://imagecontainter-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/快速的Redis有哪些慢操作-2022-03-14-19-55-14.png)
+![快速的Redis有哪些慢操作-2022-05-08-20-52-56](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/快速的Redis有哪些慢操作-2022-05-08-20-52-56.png)
 
 哈希表本质上是一个数组，每个数组中的元素称之为哈希桶，哈希桶中保存的不是元素的值本身，而是指向元素的指针。
 

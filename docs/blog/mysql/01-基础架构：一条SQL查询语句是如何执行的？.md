@@ -7,7 +7,7 @@ categories:
  - MySQL
 ---
 
-![一条SQL查询语句是如何执行的？-2022-03-13-16-09-54](https://imagecontainter-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/一条SQL查询语句是如何执行的？-2022-03-13-16-09-54.png)
+![一条SQL查询语句是如何执行的？-2022-05-08-20-43-51](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/一条SQL查询语句是如何执行的？-2022-05-08-20-43-51.png)
 
 上图展示了一条SQL语句的执行过程。MySQL大致可以分为Server层和存储引擎层。其中，Server层主要包括连接器、查询缓存、分析器、执行器、优化器。而存储引擎层有InnoDB、MyISAM、Memory等存储引擎。
 
