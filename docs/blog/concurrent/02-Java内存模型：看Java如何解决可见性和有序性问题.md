@@ -88,7 +88,7 @@ class VolatileExample {
 
 含义：指的是如果A Happens-Before B，且B Happens-Before C，那么A Happens-Before C
 
-![image-20220124205758749](https://raw.githubusercontent.com/yhli394/images/main/blog_image/java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98/02/image-20220124205758749.png)
+![极客-并发编程-01-2022-06-04-15-59-59](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/极客-并发编程-01-2022-06-04-15-59-59.png)
 
 上图中:
 

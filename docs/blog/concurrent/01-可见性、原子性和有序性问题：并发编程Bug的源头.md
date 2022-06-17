@@ -21,11 +21,11 @@ categories:
 
 单核时代，所有的线程都是在一颗CPU上执行，CPU缓存与内存的数据一致性容易解决，例如，下图，线程A对变量V的值进行更新，下一次线程B访问变量V，得到的是V的最新值
 
-![image-20220122112440430](C:\Users\Swjtu-Li\AppData\Roaming\Typora\typora-user-images\image-20220122112440430.png)
+![极客-并发编程-01-2022-06-04-15-57-07](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/极客-并发编程-01-2022-06-04-15-57-07.png)
 
 多核时代，每颗CPU都有自己的缓存，CPU缓存与内存的数据一致性不是很容易解决，例如下图，线程A对变量V的操作对于线程B而言不具备可见性
 
-![image-20220122112731161](C:\Users\Swjtu-Li\AppData\Roaming\Typora\typora-user-images\image-20220122112731161.png)
+![极客-并发编程-01-2022-06-04-15-57-44](https://images-1309978559.cos.ap-chengdu.myqcloud.com/blogimages/极客-并发编程-01-2022-06-04-15-57-44.png)
 
 main方法中调用clac()方法，打印出的count的值是在10000-20000之间的随机数，count的值一般接近于20000，因为两个线程启动有时差；如果把循环次数改为1亿次，那么count的值一般接近1亿，此时可以忽略两个线程启动的时差，把两个线程看作是同时启动的；
 
