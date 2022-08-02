@@ -1,5 +1,5 @@
 ---
-title: SQL基础强化
+title: SQL必知必会
 date: 2022-7-12
 tags: 
 - 牛客SQL题库
@@ -245,3 +245,78 @@ WHERE prod_desc Like '%toy%carrots%';
 - 百分号%是通配符，但不能匹配null，下划线_只能匹配单个字符
 - LIKE操作符的否定为NOT LIKE
 
+## 创建计算字段
+
+### SQL79 别名
+
+编写 SQL 语句，从 Vendors 表中检索vend_id、vend_name、vend_address 和 vend_city，将 vend_name重命名为 vname，将 vend_city 重命名为 vcity，将 vend_address重命名为 vaddress，按供应商名称对结果进行升序排序。
+
+```mysql
+SELECT vend_id,vend_name AS vname,vend_address AS vaddress,vend_city AS vcity
+FROM Vendors
+ORDER BY vname;
+```
+
+### SQL80 打折
+
+编写 SQL语句，从 Products 表中返回 prod_id、prod_price 和 sale_price。sale_price 是一个包含促销价格的计算字段。提示：可以乘以 0.9，得到原价的 90%（即 10%的折扣）
+
+```mysql
+SELECT prod_id,prod_price,prod_price*0.9 AS sale_price
+FROM Products;
+```
+
+注意：如何使得原本只有两列的表，经过查询后变为三列。
+
+## 使用函数处理数据
+
+### SQL81 顾客登录名
+
+编写 SQL 语句，返回顾客 ID（cust_id）、顾客名称（cust_name）和登录名（user_login），其中登录名全部为大写字母，并由顾客联系人的前两个字符（cust_contact）和其所在城市的前三个字符（cust_city）组成。提示：需要使用函数、拼接和别名。
+
+```mysql
+SELECT cust_id,cust_name,UPPER(CONCAT(SUBSTRING(cust_contact,1,2),SUBSTRING(cust_city,1,3))) AS user_login
+FROM Customers
+```
+
+总结：
+
+UPPER函数：让所有字符变为大写
+
+SUBSTRING：字符串切片函数（注意：第一个字符是从1开始计数的），常用的形式有如下：
+
+- SUBSTRING(str,pos,len)：从字符串str中pos位置开始截取len长度的子串。
+
+- SUBSTRING(str,pos)：从字符串str中的pos位置开始，一直截取到str末尾。
+
+CONCAT:字符串拼接函数
+
+### SQL82 返回 2020 年 1 月的所有订单的订单号和订单日期
+
+编写 SQL 语句，返回 2020 年 1 月的所有订单的订单号（order_num）和订单日期（order_date），并按订单日期升序排序
+
+解法一：
+
+```mysql
+SELECT order_num,order_date
+FROM Orders
+WHERE YEAR(order_date)=2020 AND MONTH(order_date)=1
+ORDER BY order_date
+```
+
+解法二：
+
+```mysql
+SELECT order_num,order_date
+FROM Orders
+WHERE DATE(order_date) BETWEEN '2020-01-01' AND '2020-01-31'
+ORDER BY order_date
+```
+
+总结：
+
+DATE函数：提取日期时间中的日期部分，例如SELECT DATE('2020-03-05 12:30:55')返回2020-03-05
+
+YEAR函数：提取日期中的年部分，例如SELECT YEAR('2020-03-05')返回2020
+
+MONTH函数：提取日期中的月份，例如SELECT MONTH('2020-03-05')返回3

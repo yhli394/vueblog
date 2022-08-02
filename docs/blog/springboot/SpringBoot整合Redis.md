@@ -5,7 +5,7 @@ date: 2022-2-20
 tags: [SpringBoot]
 categories: 
 - Spring
-sticky: 2
+# sticky: 1
 ---
 在SpringBoot中整合操作Redis目前已知有三种方案：Spring Data Redis，Spring Cache,Jedis等客户端连接。本篇博客介绍第二方案，即Spring Cache。
 

@@ -6,7 +6,7 @@ tags:
   - SpringBoot
 categories:  
 - Spring
-sticky: 3
+sticky: 1
 ---
 
 ​SpringBoot接触了有几个月了，目前基本会用这个框架，但是底层的原理了解甚少。结合目前做过的一些项目，今天先来总结一下SpringBoot中的常用注解。
@@ -126,25 +126,24 @@ public class Controller {
 
 - @Configuration
 
-  翻译成中文有“配置”的含义，用来标记类或者接口。
+翻译成中文有“配置”的含义，用来标记类或者接口。
 
-  以下内容摘自官方文档:
+以下内容摘自官方文档:
 
-  > Annotating a class with `@Configuration` indicates that its primary purpose is as a source of bean definitions. Furthermore, `@Configuration` classes let inter-bean dependencies(bean对象之间的依赖关系) be defined by calling other `@Bean` methods in the same class. The simplest possible `@Configuration` class reads as follows:
-  >
-  > @Configuration 
-  >
-  > public class AppConfig {    
-  >
-  > ​	 @Bean   
-  >
-  > ​	 public MyService myService() {        
-  >
-  > ​			return new MyServiceImpl();   
-  >
-  > ​	 }
-  >
-  >  }
+> Annotating a class with `@Configuration` indicates that its primary purpose is as a source of bean definitions. Furthermore, `@Configuration` classes let inter-bean dependencies(bean对象之间的依赖关系) be defined by calling other `@Bean` methods in the same class. The simplest possible `@Configuration` class reads as follows:
+>
+> @Configuration 
+>
+> public class AppConfig {    
+>
+> ​	 @Bean   
+>
+> ​	 public MyService myService() {        
+>
+> ​			return new MyServiceImpl();   
+>
+> ​	 }
+>  }
 
 ## 五、@PathVariable、@RequestBody、@RequestParam、@ResponseBody、@Param
 
@@ -172,9 +171,8 @@ public class Controller {
 源码：
 
 > The annotation that specify the parameter name.
-> How to use:
->    public interface UserMapper {
->      @Select("SELECT id, name FROM users WHERE name = #{name}")
->      User selectById(@Param("name") String value);
->    }
-
+How to use:
+    public interface UserMapper {
+      @Select("SELECT id, name FROM users WHERE name = #{name}")
+      User selectById(@Param("name") String value);
+    }

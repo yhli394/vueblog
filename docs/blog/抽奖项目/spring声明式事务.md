@@ -5,6 +5,7 @@ date: 2022-7-18
 tags: [抽奖项目]
 categories: 
 - Project
+sticky: 2
 ---
 
 spring事务分为编程式事务和声明式事务，由于编程式事务和业务逻辑代码耦合度较高，因此，很少使用。本次只介绍spring中的声明式事务。
