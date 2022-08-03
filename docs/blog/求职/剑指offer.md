@@ -7,7 +7,9 @@ categories:
 - Algorithm
 ---
 
-1. 用两个栈实现队列
+## 栈与队列（简单）
+
+- 用两个栈实现队列
 
 ```java
 //解法一：用LinkedList模拟栈
@@ -67,7 +69,7 @@ public class AchieveQueueByTwoStack {
 }
 ```
 
-2. 包含min函数的栈
+- 包含min函数的栈
 
 ```java
 //采用辅助栈法
@@ -143,7 +145,9 @@ Integer y =127;
 System.out.println(x == y);//true
 ```
 
-3. 从尾到头打印链表
+## 链表（简单）
+
+- 从尾到头打印链表
 
 ```java
 class Solution {
@@ -192,7 +196,7 @@ class Solution {
 空间复杂度：O(n)
 ```
 
-4. 反转链表
+- 反转链表
 
 ```java
 /**
@@ -225,7 +229,7 @@ class Solution {
   }
 ```
 
-5. 复杂链表的复制
+- 复杂链表的复制
 
 ```java
 /*
@@ -268,7 +272,9 @@ class Solution {
 }
 ```
 
-6. 替换空格
+## 字符串（简单）
+
+- 替换空格
 
 ```java
 class Solution {
@@ -289,7 +295,7 @@ class Solution {
 //s.charAt(i).equals(' ')，报错，原因是s.charAt(i)返回的是一个值，值没有equals()方法
 ```
 
-7. 左旋转字符串
+- 左旋转字符串
 
 ```java
 //解法一：若面试不允许用切片函数，则用此方法
@@ -327,7 +333,9 @@ class Solution {
 }
 ```
 
-8. 数组中重复的数字
+## 查找算法（简单）
+
+- 数组中重复的数字
 
 ```java
 //解法一：利用哈希表
@@ -359,7 +367,7 @@ class Solution {
 }
 ```
 
-9. 在排序数组中查找数字I
+- 在排序数组中查找数字I
 
 ```java
 //暴力解法
@@ -397,7 +405,7 @@ class Solution {
 }
 ```
 
-10. 0~n-1中缺失的数字
+- 0~n-1中缺失的数字
 
 ```java
 //最优解法是二分解法，时间复杂度为O(logn)
@@ -413,7 +421,9 @@ class Solution {
 }
 ```
 
-11. 二维数组中的查找
+## 查找算法（中等）
+
+- 二维数组中的查找
 
 ```java
 //解法一：每一层采用二分查找
@@ -459,7 +469,7 @@ class Solution {
 空间复杂度：O(1)
 ```
 
-12. 旋转数组的最小数字
+- 旋转数组的最小数字
 
 ```java
 class Solution {
@@ -493,7 +503,7 @@ class Solution {
 }
 ```
 
-13. 第一个只出现一次的字符
+- 第一个只出现一次的字符
 
 ```java
 //解法一：哈希表
@@ -554,7 +564,9 @@ public class FirstUniqChar {
 //Entry是Map接口内部的一个接口
 ```
 
-14. 从上到下打印二叉树
+## 搜索与回溯算法（简单）
+
+- 从上到下打印二叉树
 
 ```java
 /**
@@ -601,7 +613,7 @@ System.out.println(list.size());//2
 System.out.println(list.isEmpty());//false
 ```
 
-15. 从上到下打印二叉树II:每一层打印一行
+- 从上到下打印二叉树II:每一层打印一行
 
 ```java
 /**
@@ -641,7 +653,7 @@ class Solution {
 }
 ```
 
-16. 从上到下打印二叉树III:按照之字形打印
+- 从上到下打印二叉树III:按照之字形打印
 
 ```java
 /**
@@ -707,7 +719,7 @@ public class PrintBinaryTree3 {
 }
 ```
 
-26. 树的子结构
+- 树的子结构
 
 ```java
 /**
@@ -735,7 +747,7 @@ class Solution {
 }
 ```
 
-27. 二叉树的镜像
+- 二叉树的镜像
 
 ```java
 /**
@@ -808,7 +820,7 @@ class Solution {
 }
 ```
 
-28. 对称的二叉树
+- 对称的二叉树
 
 ```java
 //错误解答
@@ -864,7 +876,9 @@ class Solution {
 }
 ```
 
-10-I斐波那契数列
+## 动态规划（简单）
+
+- 斐波那契数列
 
 ```java
 package com.li.leetcode.Offer;
@@ -900,7 +914,7 @@ public class Fibonacci {
 }
 ```
 
-10-II青蛙跳台阶问题
+- 青蛙跳台阶问题
 
 ```java
 class Solution {
@@ -922,7 +936,7 @@ class Solution {
 //质数又称为素数，指的是只有1和本身两个正因数
 ```
 
-63. 股票的最大利润
+- 股票的最大利润
 
 ```java
 class Solution {
@@ -944,7 +958,9 @@ class Solution {
 空间复杂度：O(1)
 ```
 
-42. 连续子数组的最大和
+## 动态规划（中等）
+
+- 连续子数组的最大和
 
 ```java
 class Solution {
@@ -959,7 +975,7 @@ class Solution {
 }
 ```
 
-47. 礼物的最大价值
+- 礼物的最大价值
 
 ```java
 //解法一
@@ -999,7 +1015,7 @@ class Solution {
 }
 ```
 
-46. 把数字翻译成字符串
+- 把数字翻译成字符串
 
 ```java
 class Solution {
@@ -1022,7 +1038,7 @@ class Solution {
 }
 ```
 
-48. 最长不含重复字符的子字符串
+- 最长不含重复字符的子字符串
 
 ```java
 //动态规划（理解思想，掌握常规解法）
@@ -1042,7 +1058,9 @@ class Solution {
 }
 ```
 
-18. 删除链表的节点
+## 双指针（简单）
+
+- 删除链表的节点
 
 ```java
 /**
@@ -1074,7 +1092,7 @@ class Solution {
 空间复杂度：O(1)
 ```
 
-22. 链表中倒数第k个节点
+- 链表中倒数第k个节点
 
 ```java
 /**
@@ -1102,7 +1120,7 @@ class Solution {
 }
 ```
 
-25. 合并两个排序的链表
+- 合并两个排序的链表
 
 ```java
 /**
@@ -1139,7 +1157,7 @@ class Solution {
 }                                                    
 ```
 
-52. 两个链表的第一个公共节点
+- 两个链表的第一个公共节点
 
 ```java
 /**
@@ -1187,7 +1205,7 @@ public class Solution {
 }
 ```
 
-21. 调整数组顺序使得奇数位于偶数前面
+- 调整数组顺序使得奇数位于偶数前面
 
 ```java
 //解法一：
@@ -1228,7 +1246,7 @@ class Solution {
 }
 ```
 
-57. 和为s的两个数字
+- 和为s的两个数字
 
 ```java
 //解法一
@@ -1265,7 +1283,7 @@ class Solution {
 }
 ```
 
-58. 翻转单词顺序
+- 翻转单词顺序
 
 ```java
 //解法一(耗时13ms)：
@@ -1328,7 +1346,9 @@ class Solution {
 }
 ```
 
-12. 矩阵中的路径
+## 搜索与回溯算法（中等）
+
+- 矩阵中的路径
 
 ```java
 class Solution {
@@ -1355,7 +1375,7 @@ class Solution {
 }
 ```
 
-13. 机器人的运动范围
+- 机器人的运动范围
 
 ```java
 /**
@@ -1411,7 +1431,7 @@ public class MovedRobot {
 }
 ```
 
-34. 二叉树中和为某一值的路径
+- 二叉树中和为某一值的路径
 
 ```java
     List<List<Integer>> list = new ArrayList<>();
@@ -1440,7 +1460,7 @@ public class MovedRobot {
     }
 ```
 
-36. 二叉搜索树与双向链表
+- 二叉搜索树与双向链表
 
 ```java
 /*
@@ -1487,7 +1507,7 @@ class Solution {
 空间复杂度：O(N)（二叉搜索树退化为链表的时候）
 ```
 
-54. 二叉搜索树的第K大节点
+- 二叉搜索树的第K大节点
 
 ```java
 /**
@@ -1518,7 +1538,134 @@ class Solution {
 //第二种解法的思路：二叉搜索树中序遍历的倒序遍历为递减序列
 ```
 
-45. 把数组排成最小的数
+- I-二叉树的深度
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+//递归解法
+class Solution {
+    public int maxDepth(TreeNode root) {
+        return postOrderTraversal(root);
+    }
+    //关键：二叉树的深度=max(左子树的深度，右子树的深度)+1
+    public int postOrderTraversal(TreeNode root){
+        if(root==null) return 0;
+        int left = postOrderTraversal(root.left);
+        int right = postOrderTraversal(root.right);
+        return Math.max(left,right)+1;
+    }
+}
+//先序遍历：PreOrderTraversal
+//中序遍历：InOrderTraversal
+//后序遍历：PostOrderTraversal
+```
+
+- II-平衡二叉树
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+//后序遍历+剪枝
+class Solution {
+    public boolean isBalanced(TreeNode root) {
+        return postOrderTraversal(root)!=-1;
+    }
+    public int postOrderTraversal(TreeNode root){
+        if(root==null) return 0;
+        int left = postOrderTraversal(root.left);
+        if(left==-1) return -1;
+        int right = postOrderTraversal(root.right);
+        if(right==-1) return -1;
+        return Math.abs(left-right)<=1?Math.max(left,right)+1:-1;
+    }
+}
+```
+
+- 求1+2+3+...+n(要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）)
+
+```java
+class Solution {
+    int res =0;
+    public int sumNums(int n) {
+        boolean flag = n>1&&sumNums(n-1)>0;
+        res+=n;
+        return res;
+    }
+}
+```
+
+- I.二叉搜索树的最近公共祖先
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        //1.如果p,q在root节点的两侧或p,q节点和root节点为同一个节点，那么root为p,q的最近公共祖先
+        //2.如果p,q在root节点的右侧，递归root的右子树
+        //3.如果p,q在root节点的左侧，递归root的左子树
+        if(p.val>root.val&&q.val>root.val){
+            return lowestCommonAncestor(root.right,p,q);
+        }
+        if(p.val<root.val&&q.val<root.val){
+            return lowestCommonAncestor(root.left,p,q);
+        }
+        return root;
+    }
+}
+```
+
+- II. 二叉树的最近公共祖先
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if(root==null||root==p||root==q) return root;
+        TreeNode left = lowestCommonAncestor(root.left,p,q);
+        TreeNode right = lowestCommonAncestor(root.right,p,q);
+        if(left==null&&right==null) return null;
+        if(left==null) return right;
+        if(right==null) return left;
+        //if(left!=null&&right!=null)
+        return root;
+    }
+}
+```
+
+## 排序（简单）
+
+- 把数组排成最小的数
 
 ```java
 class Solution {
@@ -1574,7 +1721,7 @@ class Solution {
 }
 ```
 
-61. 扑克牌中的顺子
+- 扑克牌中的顺子
 
 ```java
 class Solution {
@@ -1598,7 +1745,9 @@ class Solution {
 }
 ```
 
-40. 最小的k个数
+## 排序（中等）
+
+- 最小的k个数
 
 ```java
 class Solution {
@@ -1613,7 +1762,7 @@ class Solution {
 }
 ```
 
-41. 数据流中的中位数(困难)
+- 数据流中的中位数(困难)
 
 ```java
 //超时解法
@@ -1683,132 +1832,9 @@ class MedianFinder {
  */
 ```
 
-55. I-二叉树的深度
+## 分治算法（中等）
 
-```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-//递归解法
-class Solution {
-    public int maxDepth(TreeNode root) {
-        return postOrderTraversal(root);
-    }
-    //关键：二叉树的深度=max(左子树的深度，右子树的深度)+1
-    public int postOrderTraversal(TreeNode root){
-        if(root==null) return 0;
-        int left = postOrderTraversal(root.left);
-        int right = postOrderTraversal(root.right);
-        return Math.max(left,right)+1;
-    }
-}
-//先序遍历：PreOrderTraversal
-//中序遍历：InOrderTraversal
-//后序遍历：PostOrderTraversal
-```
-
-56. II-平衡二叉树
-
-```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-//后序遍历+剪枝
-class Solution {
-    public boolean isBalanced(TreeNode root) {
-        return postOrderTraversal(root)!=-1;
-    }
-    public int postOrderTraversal(TreeNode root){
-        if(root==null) return 0;
-        int left = postOrderTraversal(root.left);
-        if(left==-1) return -1;
-        int right = postOrderTraversal(root.right);
-        if(right==-1) return -1;
-        return Math.abs(left-right)<=1?Math.max(left,right)+1:-1;
-    }
-}
-```
-
-64. 求1+2+3+...+n(要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）)
-
-```java
-class Solution {
-    int res =0;
-    public int sumNums(int n) {
-        boolean flag = n>1&&sumNums(n-1)>0;
-        res+=n;
-        return res;
-    }
-}
-```
-
-68. I.二叉搜索树的最近公共祖先
-
-```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        //1.如果p,q在root节点的两侧或p,q节点和root节点为同一个节点，那么root为p,q的最近公共祖先
-        //2.如果p,q在root节点的右侧，递归root的右子树
-        //3.如果p,q在root节点的左侧，递归root的左子树
-        if(p.val>root.val&&q.val>root.val){
-            return lowestCommonAncestor(root.right,p,q);
-        }
-        if(p.val<root.val&&q.val<root.val){
-            return lowestCommonAncestor(root.left,p,q);
-        }
-        return root;
-    }
-}
-```
-
-68. II. 二叉树的最近公共祖先
-
-```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if(root==null||root==p||root==q) return root;
-        TreeNode left = lowestCommonAncestor(root.left,p,q);
-        TreeNode right = lowestCommonAncestor(root.right,p,q);
-        if(left==null&&right==null) return null;
-        if(left==null) return right;
-        if(right==null) return left;
-        //if(left!=null&&right!=null)
-        return root;
-    }
-}
-```
-
-07.重建二叉树
+- 重建二叉树
 
 ```java
 /**
@@ -1847,7 +1873,7 @@ class Solution {
 }
 ```
 
-16. 数值的整数次方
+- 数值的整数次方
 
 ```java
 class Solution {
@@ -1869,7 +1895,7 @@ class Solution {
 }
 ```
 
-33. 二叉搜索树的后序遍历序列
+- 二叉搜索树的后序遍历序列
 
 ```java
 class Solution {
@@ -1888,7 +1914,9 @@ class Solution {
 }
 ```
 
-15. 二进制中1的个数
+## 位运算（简单）
+
+- 二进制中1的个数
 
 ```java
 public class Solution {
@@ -1922,7 +1950,7 @@ a>>1相当于a/2（前提是a不是负奇数，例如如果a为-11，a>>1结果�
 a<<1相当于a*2
 ```
 
-65. 不用加减乘除做加法
+- 不用加减乘除做加法
 
 ```java
 class Solution {
@@ -1943,7 +1971,9 @@ class Solution {
 }
 ```
 
-56. I-数组中数字出现的次数
+## 位运算（中等）
+
+- I-数组中数字出现的次数
 
 ```java
 class Solution {
@@ -1973,7 +2003,7 @@ class Solution {
 }
 ```
 
-56. Ⅱ-数组中数字出现的次数
+- Ⅱ-数组中数字出现的次数
 
 ```java
 class Solution {
@@ -1999,9 +2029,12 @@ class Solution {
 }
 ```
 
-39. 数组中出现次数超过一半的数字
+## 数学（简单）
+
+- 数组中出现次数超过一半的数字
 
 方法一：哈希表
+
 ```java
 class Solution {
     public int majorityElement(int[] nums) {
@@ -2021,10 +2054,12 @@ class Solution {
     }
 }
 ```
+
 方法二：摩尔投票法（最优解）
 原理：正方票数加一，反方票数减一；
 结论1：在本题中，记数组中出现次数超过一半的数字为m（正方），其他数字为反方，则所有数字加起来的票数和恒大于0；
 结论2：记数组长度为n，数组中前x个数字的票数和为0，那么后（n-x）个数字的票数和必大于零，且后(n-x)个数字中出现次数超过一半的数字必为m
+
 ```java
 class Solution {
     public int majorityElement(int[] nums) {
@@ -2042,10 +2077,9 @@ class Solution {
 }
 ```
 
-66. 构建乘数积：给定一个数组 A[0,1,…,n-1]，请构建一个数组 B[0,1,…,n-1]，其中 B[i] 的值是数组 A 中除了下标 i 以外的元素的积, 即 B[i]=A[0]×A[1]×…×A[i-1]×A[i+1]×…×A[n-1]。不能使用除法。
+- 构建乘数积：给定一个数组 A[0,1,…,n-1]，请构建一个数组 B[0,1,…,n-1]，其中 B[i] 的值是数组 A 中除了下标 i 以外的元素的积, 即 B[i]=A[0]×A[1]×…×A[i-1]×A[i+1]×…×A[n-1]。不能使用除法。
 
 ```java
-
 class Solution {
     public int[] constructArr(int[] a) {
         if(a.length==0) return new int[]{};
@@ -2067,7 +2101,9 @@ class Solution {
 
 ```
 
-14. Ⅰ-剪绳子：给你一根长度为 n 的绳子，请把绳子剪成整数长度的 m 段（m、n都是整数，n>1并且m>1），每段绳子的长度记为 k[0],k[1]...k[m-1] 。请问 k[0]*k[1]*...*k[m-1] 可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。
+## 数学（中等）
+
+- Ⅰ-剪绳子：给你一根长度为 n 的绳子，请把绳子剪成整数长度的 m 段（m、n都是整数，n>1并且m>1），每段绳子的长度记为 k[0],k[1]...k[m-1] 。请问 k[0]*k[1]*...*k[m-1] 可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。
 
 ```java
 //数学推导（均值不等式，求导）解法：
@@ -2091,7 +2127,7 @@ class Solution {
 //Math.pow()可以认为时间复杂度为O(1)
 ```
 
-15. 57-Ⅱ 和为s的连续正数序列：输入一个正整数 target ，输出所有和为 target 的连续正整数序列（至少含有两个数）。序列内的数字由小到大排列，不同序列按照首个数字从小到大排列。
+- 57-Ⅱ 和为s的连续正数序列：输入一个正整数 target ，输出所有和为 target 的连续正整数序列（至少含有两个数）。序列内的数字由小到大排列，不同序列按照首个数字从小到大排列。
 
 ```java
 class Solution{
@@ -2118,7 +2154,7 @@ class Solution{
 
 ```
 
-62. 圆圈中最后剩下的数字:0,1,···,n-1这n个数字排成一个圆圈，从数字0开始，每次从这个圆圈里删除第m个数字（删除后从下一个数字开始计数）。求出这个圆圈里剩下的最后一个数字。例如，0、1、2、3、4这5个数字组成一个圆圈，从数字0开始每次删除第3个数字，则删除的前4个数字依次是2、0、4、1，因此最后剩下的数字是3。
+- 圆圈中最后剩下的数字:0,1,···,n-1这n个数字排成一个圆圈，从数字0开始，每次从这个圆圈里删除第m个数字（删除后从下一个数字开始计数）。求出这个圆圈里剩下的最后一个数字。例如，0、1、2、3、4这5个数字组成一个圆圈，从数字0开始每次删除第3个数字，则删除的前4个数字依次是2、0、4、1，因此最后剩下的数字是3。
 
 ```java
 //动态规划：状态转移方程为f(n)=(f(n-1)+m)%n，其中f(n)为原问题的解
@@ -2132,7 +2168,11 @@ class Solution {
     }
 }
 ```
-29. 顺时针打印矩阵：输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。
+
+## 模拟（中等）
+
+- 顺时针打印矩阵：输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。
+
 ```java
 class Solution{
     public int[] spiralOrder(int[][] matrix){
@@ -2173,7 +2213,8 @@ class Solution{
     }
 }
 ```
-31. 栈的压入、弹出序列：输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列 {1,2,3,4,5} 是某栈的压栈序列，序列 {4,5,3,2,1} 是该压栈序列对应的一个弹出序列，但 {4,3,5,1,2} 就不可能是该压栈序列的弹出序列。
+
+- 栈的压入、弹出序列：输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列 {1,2,3,4,5} 是某栈的压栈序列，序列 {4,5,3,2,1} 是该压栈序列对应的一个弹出序列，但 {4,3,5,1,2} 就不可能是该压栈序列的弹出序列。
 
 ```java
 //自己写出来的
@@ -2221,7 +2262,10 @@ class Solution {
     }
 }
 ```
-20. 表示数值的字符串：请实现一个函数用来判断字符串是否表示数值（包括整数和小数）
+
+## 字符串（中等）
+
+- 表示数值的字符串：请实现一个函数用来判断字符串是否表示数值（包括整数和小数）
 
 数值（按顺序）可以分成以下几个部分：
 
@@ -2293,7 +2337,7 @@ class Solution {
 }
 ```
 
-67. 把字符串转化成整数：
+- 把字符串转化成整数：
 写一个函数 StrToInt，实现把字符串转换成整数这个功能。不能使用 atoi 或者其他类似的库函数。首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。当我们寻找到的第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字组合起来，作为该整数的正负号；假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成整数。该字符串除了有效的整数部分之后也可能会存在多余的字符，这些字符可以被忽略，它们对于函数不应该造成影响。注意：假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换。在任何情况下，若函数不能进行有效的转换时，请返回 0。说明：假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 [−231,  231 − 1]。如果数值超过这个范围，请返回  INT_MAX (231 − 1) 或 INT_MIN (−231) 。
 
 ```java
@@ -2360,7 +2404,10 @@ if(expression 1){
 if-else if语法：如果expression 1为true，那么会执行content 1，即使expression 2或者expression 3为true，也不会执行content 2或者content 3或者content 4
 ```
 
-59. Ⅰ-滑动窗口的最大值：给定一个数组 `nums` 和滑动窗口的大小 `k`，请找出所有滑动窗口里的最大值
+
+## 栈与队列（困难）
+
+- Ⅰ-滑动窗口的最大值：给定一个数组 `nums` 和滑动窗口的大小 `k`，请找出所有滑动窗口里的最大值
 
 ```java
 class Solution {
@@ -2396,7 +2443,7 @@ class Solution {
 
 双端队列（deque）：允许在头部和尾部都高效的添加或删除元素，即在队列两端都可以进行删除和添加
 
-59. Ⅱ 队列的最大值：请定义一个队列并实现函数 max_value 得到队列里的最大值，要求函数max_value、push_back 和 pop_front 的均摊时间复杂度都是O(1)。若队列为空，pop_front 和 max_value 需要返回 -1
+- Ⅱ 队列的最大值：请定义一个队列并实现函数 max_value 得到队列里的最大值，要求函数max_value、push_back 和 pop_front 的均摊时间复杂度都是O(1)。若队列为空，pop_front 和 max_value 需要返回 -1
 
 ```java
 class MaxQueue {
@@ -2451,7 +2498,7 @@ class MaxQueue {
 
 ## 搜索与回溯算法（困难）
 
-### 剑指 Offer 37. 序列化二叉树
+- 序列化二叉树
 
 请实现两个函数，分别用来序列化和反序列化二叉树。你需要设计一个算法来实现二叉树的序列化与反序列化。这里不限定你的序列 / 反序列化算法执行逻辑，你只需要保证一个二叉树可以被序列化为一个字符串并且将这个字符串反序列化为原始的树结构。
 
@@ -2511,7 +2558,7 @@ class TreeNode{
 
 ```
 
-### 剑指 Offer 38. 字符串的排列
+- 字符串的排列
 
 输入一个字符串，打印出该字符串中字符的所有排列。你可以以任意顺序返回这个字符串数组，但里面不能有重复元素。
 
@@ -2564,9 +2611,9 @@ public class Permutation {
 
 总结：和代码随想录中回溯专题的全排列Ⅱ很像。
 
-## 
+## 动态规划（困难）
 
-### 剑指 Offer 49. 丑数
+- 丑数
 
 我们把只包含质因子 2、3 和 5 的数称作丑数（Ugly Number）。求按从小到大的顺序的第 n 个丑数。
 
